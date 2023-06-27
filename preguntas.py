@@ -202,7 +202,7 @@ def pregunta_11():
     """
     tbl3=tbl1.sort_values(["_c0","_c4"])
     tbl3=tbl3.groupby("_c0").agg({"_c4":",".join})
-
+    tbl3.reset_index(inplace=True)
     return tbl3 
 
 
